@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Rev.Models.Department>
+@{
+    ViewData["Title"] = "Cadastro De Empresas";
+}
+<h2>@ViewData["Title"]</h2>
+
+<br />
+<hr />
+
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-success">Adicionar nova empresa</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

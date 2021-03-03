@@ -1,0 +1,59 @@
+﻿@model Rev.Models.ViewModels.RegistroViewModel
+
+@{ ViewData["Title"] = "Editar"; }
+
+<h2>@ViewData["Title"]</h2>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Registro.Id" />
+            <div class="form-group">
+                <label asp-for="Registro.Department" class="control-label"></label>
+                <select asp-for="Registro.DepartmentId" asp-items="@(new SelectList(Model.Departments,"Id","Nome"))" class="form-control"></select>
+                <span asp-validation-for="Registro.DepartmentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registro.Valor" class="control-label"></label>
+                <input asp-for="Registro.Valor" class="form-control" />
+                <span asp-validation-for="Registro.Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registro.Descrição" class="control-label"></label>
+                <input asp-for="Registro.Descrição" class="form-control" />
+                <span asp-validation-for="Registro.Descrição" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registro.Data" class="control-label"></label>
+                <input asp-for="Registro.Data" class="form-control" />
+                <span asp-validation-for="Registro.Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registro.Tipo" class="control-label"></label>
+                <select asp-for="Registro.TipoId" asp-items="@(new SelectList(Model.Tipos,"Id","Nome"))" class="form-control"></select>
+                <span asp-validation-for="Registro.TipoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registro.Operacao" class="control-label"></label>
+                <input asp-for="Registro.Operacao" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Registro.Fonte" class="control-label"></label>
+                <input asp-for="Registro.Fonte" class="form-control" />
+            </div>
+
+
+            <div class="form-group">
+                <input class="btn btn-outline-success" type="submit" value="Salvar" />
+                <a asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

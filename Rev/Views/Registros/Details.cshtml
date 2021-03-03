@@ -1,0 +1,62 @@
+﻿@model Rev.Models.Registro
+
+@{
+    ViewData["Title"] = "Detalhes Do Registro";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+<div>
+    <hr />
+     <dl class="dl-horizontal">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Department.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descrição)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descrição)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tipo.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Operacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Operacao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fonte)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fonte)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit"  asp-route-id="@Model.Id">Editar</a>
+    <a asp-action="Index">Voltar</a>
+
+</div>
+
