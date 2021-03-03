@@ -35,6 +35,7 @@ namespace Rev
             services.AddScoped<TipoServico>();
             services.AddScoped<RegistroServico>();
             services.AddScoped<DepartmentService>();
+            services.AddScoped<RegistroRecordService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
