@@ -25,7 +25,7 @@ namespace Rev.Models
         public Tipo Tipo { get; set; }
 
         [Required(ErrorMessage = "{0} é requerido")]
-        [Display(Name = "Tipo de registro")]
+       
         public int TipoId { get; set; }
 
         [Required(ErrorMessage = "{0} é requerido")]
@@ -37,7 +37,7 @@ namespace Rev.Models
         public Department Department { get; set; }
 
         [Required(ErrorMessage = "{0} é requerido")]
-        [Display(Name = "Empresa")]
+       
         public int DepartmentId { get; set; }
         public Fonte Fonte { get; set; }
 

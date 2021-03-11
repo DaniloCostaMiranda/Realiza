@@ -35,5 +35,13 @@ namespace Rev.Services
                 .ToListAsync();
 
         }
+
+        public async Task<List<IGrouping<Department,Registro>>> FindByDateGroupingAsync(DateTime? minDate, DateTime? maxDate)
+        {
+            var result = await FindByDateAsync(minDate, maxDate);
+
+            return result.GroupBy(x => x.Department).ToList();
+
+        }
     }
 }
