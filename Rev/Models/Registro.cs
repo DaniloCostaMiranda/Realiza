@@ -32,8 +32,8 @@ namespace Rev.Models
         [Display(Name = "Entrada ou Saída")]
         public Operacao Operacao { get; set; }
 
+        [Required(ErrorMessage = "{0} é requerido")]
 
-       
         public Department Department { get; set; }
 
         [Required(ErrorMessage = "{0} é requerido")]
