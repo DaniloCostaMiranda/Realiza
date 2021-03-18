@@ -43,5 +43,12 @@ namespace Rev.Services
             return result.GroupBy(x => x.Department).ToList();
 
         }
+        public async Task<List<IGrouping<Tipo, Registro>>> FindByDateGroupingTipoDespesaAsync(DateTime? minDate, DateTime? maxDate)
+        {
+            var result = await FindByDateAsync(minDate, maxDate);
+
+            return result.GroupBy(x => x.Tipo).ToList();
+
+        }
     }
 }
