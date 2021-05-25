@@ -37,6 +37,7 @@ namespace Rev
             services.AddScoped<DepartmentService>();
             services.AddScoped<RegistroRecordService>();
             services.AddScoped<FonteService>();
+            services.AddScoped<UsuarioService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,7 +65,7 @@ namespace Rev
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Logins}/{action=Login}/{id?}");
             });
         }
     }

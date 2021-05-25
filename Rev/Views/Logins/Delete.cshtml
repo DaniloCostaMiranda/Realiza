@@ -1,10 +1,11 @@
-﻿@model Rev.Models.Fonte
+﻿@model Rev.Models.Usuario
 
 @{ ViewData["Title"] = "Remover"; }
 
+
 <h3>Deseja realmente remover este item ?</h3>
 <div>
- 
+
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -17,7 +18,7 @@
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Voltar</a>
+        <input type="submit" value="Remover" class="btn btn-danger" /> |
+        <a asp-action="Cadastro">Voltar</a>
     </form>
 </div>

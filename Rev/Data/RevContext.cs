@@ -18,5 +18,6 @@ namespace Rev.Data
         public DbSet<Fonte> Fonte { get; set; }
         public DbSet<Registro> Registro { get; set; }
         public DbSet<Tipo> Tipo { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }
